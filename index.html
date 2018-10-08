@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Learn Canvas</title>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,600" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.7.22/fabric.min.js"></script>
+    <script src="js/fontfaceobserver.js"></script>
+    <script src="js/canvas.js"></script>
+    <style>
+        body{
+            font-family: 'Fira Sans', sans-serif;
+        }
+
+        canvas {
+        border: 1px dotted #000;
+        font-family: 'Fira Sans', sans-serif;
+    }
+    
+    </style>
+
+</head>
+
+<body>
+    <p>hello</p>
+    <canvas id="canvas" width="300" height="300"></canvas>
+    
+    <button onclick="cntx.upload()"> UploadImage</button>
+    <button onclick="cntx.zoomIn()"> Zoom In</button>
+    <button onclick="cntx.zoomOut()"> Zoom Out</button>
+
+    <button onclick="cntx.rotate()"> Rotate</button>
+    <button onclick="cntx.applyFilter('grayscale')">
+        GREY
+    </button>
+
+    <button onclick="cntx.applyFilter('sepia')">
+        sepia
+    </button>
+    <button onclick="cntx.applyFilter('pixelate')">
+        pixelate
+    </button>
+    <button onclick="cntx.applyFilter('brownie')">
+        brownie
+    </button>
+    <button onclick="cntx.applyFilter('vintage')">
+        vintage
+    </button>
+    <button onclick="cntx.save()">
+        Save
+    </button>
+
+    <img src="" id="final" alt="">
+
+    <script type="application/javascript">
+        var cntx = new ImageCanvas('canvas');
+    </script>
+</body>
+
+</html>
